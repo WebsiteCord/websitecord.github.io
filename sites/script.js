@@ -1,6 +1,17 @@
 // Get the URL parameters
 const urlParams = new URLSearchParams(window.location.search);
 
+// List of required parameters
+const requiredParams = ['name', 'url', '1f', '2f', '3f', '4f'];
+
+// Check if any required parameter is missing or empty
+for (const param of requiredParams) {
+    if (!urlParams.get(param)) {
+        window.location.href = 'https://websitecord.github.io/sites/null';
+        return; // Stop execution if redirecting
+    }
+}
+
 // Get the server name from the "name" parameter
 const serverName = urlParams.get('name');
 
@@ -14,7 +25,7 @@ const feature2 = urlParams.get('2f');
 const feature3 = urlParams.get('3f');
 const feature4 = urlParams.get('4f');
 
-console.log(serverName);
+
 
 // Update the features section
 const featuresSection = document.getElementById('features');
