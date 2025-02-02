@@ -6,7 +6,7 @@ const requiredParams = ['name', 'url', '1f', '2f', '3f', '4f'];
 
 // Check if any required parameter is missing or empty
 for (const param of requiredParams) {
-    if (!urlParams.get(param)) {
+    if (urlParams.get(param) == null || urlParams.get(param) == "undefined") {
         window.location.href = 'https://websitecord.github.io/sites/null';
         return; // Stop execution if redirecting
     }
