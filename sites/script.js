@@ -14,9 +14,7 @@ const feature2 = urlParams.get('2f');
 const feature3 = urlParams.get('3f');
 const feature4 = urlParams.get('4f');
 
-if (feature1 == null) {
-  window.location.href = "https://websitecord.github.io/sites/null";
-}
+console.log(serverName);
 
 // Update the features section
 const featuresSection = document.getElementById('features');
